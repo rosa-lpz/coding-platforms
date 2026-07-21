@@ -92,7 +92,7 @@ SELECT * FROM CITY
 WHERE ID LIKE 1661;
 ```
 
-### 
+
 
 ### **Output**
 
@@ -132,7 +132,7 @@ WHERE countrycode LIKE 'JPN';
 -- LIKE  "Strings like JPN, in some percent"
 ```
 
-### 
+ 
 
 ### **Output**
 
@@ -174,7 +174,7 @@ WHERE countrycode LIKE 'JPN';
 -- LIKE  "Strings like JPN, in some percent"
 ```
 
-### 
+ 
 
 ### **Output**
 
@@ -195,7 +195,7 @@ Query a list of **CITY** and **STATE** from the **STATION** table.
 
 
 
-![02_station](img/02_station.jpg)
+<img src="img/02_station.jpg" alt="02_station" style="zoom:80%;" />
 
 where **LAT_N** is the northern latitude and **LONG_W** is the western longitude.
 
@@ -230,3 +230,76 @@ Pelahatchie MS
 
 ```
 
+## 7 Weather Observation 3
+
+Query a list of **CITY** names from **STATION** for cities that have an even **ID** number. Print the results in any order, but exclude duplicates from the answer.
+The **STATION** table is described as follows:
+
+<img src="img/02_station.jpg" alt="02_station" style="zoom:80%;" />
+
+where **LAT_N** is the northern latitude and **LONG_W** is the western longitude.
+
+### **SQL Query**
+
+MySQL
+
+
+
+```sql
+SELECT DISTINCT CITY FROM STATION
+WHERE ID % 2=0;
+
+-- ID s that can be divided by 2 and with no residue are even
+
+```
+
+### **Output**
+
+```bash
+Aguanga 
+Alba 
+Albany 
+Amo 
+Andersonville 
+Archie
+
+```
+
+### 8 Weather Observation 4
+
+Find the difference between the total number of **CITY** entries in the table and the number of distinct **CITY** entries in the table. 
+ The **STATION** table is described as follows:
+
+<img src="img/02_station.jpg" alt="02_station" style="zoom:80%;" />
+
+where **LAT_N** is the northern latitude and **LONG_W** is the western longitude.
+
+For example, if there are three records in the table with **CITY** values 'New York', 'New York', 'Bengalaru', there are 2 different city names: 'New York' and 'Bengalaru'. The query returns , because 
+
+* total numbers of records $-$ number of unique city names $=$ $3 - 2 = 1$
+
+### **SQL Query**
+
+MS SQL Server
+
+```sql
+SELECT COUNT(CITY) - COUNT (DISTINCT CITY) as Difference
+FROM STATION;
+```
+
+MySQL
+
+```sql
+SELECT COUNT(CITY) - COUNT(DISTINCT CITY) 
+FROM STATION;
+```
+
+
+
+### **Output**
+
+```bash
+13
+```
+
+### 
