@@ -265,7 +265,7 @@ Archie
 
 ```
 
-### 8 Weather Observation 4
+## 8 Weather Observation 4
 
 Find the difference between the total number of **CITY** entries in the table and the number of distinct **CITY** entries in the table. 
  The **STATION** table is described as follows:
@@ -302,4 +302,19 @@ FROM STATION;
 13
 ```
 
-### 
+
+
+### **Checking the query**
+
+-------------------
+
+```SQL
+-- Number of records of cities listed
+SELECT COUNT(CITY) FROM STATION;  -- 499
+
+-- Number of cities listed (unuique elements)
+SELECT COUNT(DISTINCT CITY) FROM STATION; -- 486
+
+-- 499 - 486 = 13
+```
+
