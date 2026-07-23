@@ -6,11 +6,11 @@ Complete the function ***solveMeFirst*** to compute the sum of two integers.
 
 **Example**
 
-a= 7
+$a= 7$
 
-b=3
+$b=3$
 
-Return 10.
+Return $10$.
 
 
 
@@ -24,15 +24,16 @@ Complete the *solveMeFirst* function in the editor below.
 - *int b*: the second value
 
 Returns
-\- *int*: the sum of and 
+
+- $int$: the sum of $a$ and $b$
 
 **Constraints**
 
-1 <= a, b <= 1000
+$1 <= a, b <= 1000$
 
 * **a** must be greater than or equal to 1, and less than or equal to 1000.
 * **b** must also be greater than or equal to 1, and less than or equal to 1000.
-* So, both aaa and bbb are within the range [1, 1000].
+* So, both $a$ and $b$ are within the range [1, 1000].
 
 **Sample Input**
 
